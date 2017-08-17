@@ -3,6 +3,7 @@
 
 #include <QThread>
 #include <QMessageBox>
+#include <QMutex>
 #include <QWaitCondition>
 #include <QTimer>
 
@@ -96,7 +97,6 @@ private:
     bool m_bPause;
     bool m_quickOnly;
 
-    //
     QMutex m_mutex;
     QWaitCondition m_wait;
     QTimer m_timer;
