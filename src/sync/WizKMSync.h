@@ -1,11 +1,11 @@
-﻿#ifndef WIZKMSYNC_H
+#ifndef WIZKMSYNC_H
 #define WIZKMSYNC_H
 
 #include <QThread>
 #include <QMessageBox>
-#include <QMutex>
 #include <QWaitCondition>
 #include <QTimer>
+#include <QMutex>
 
 #include "WizSync.h"
 #include "WizKMServer.h"
@@ -97,6 +97,7 @@ private:
     bool m_bPause;
     bool m_quickOnly;
 
+    //
     QMutex m_mutex;
     QWaitCondition m_wait;
     QTimer m_timer;
